@@ -6,4 +6,11 @@ function generateMarkdown(data) {
 `;
 }
 
+function generateLicense(){
+ return `# ${data.license}`;
+}
+
 module.exports = generateMarkdown;
+
+
+// to take in a license argument

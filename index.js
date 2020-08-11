@@ -41,11 +41,22 @@ const questions = [
     message: "What kind of license would you like your project to have?",
     name: "License",
   },
+  {
+    type: "input",
+    message: "What is your Github username and profile link?",
+    name: "Github",
+  },
+  {
+    type: "input",
+    message: "What is your email?",
+    name: "Email",
+  },
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(filename, data) {
   //use fs module in order to call the write file function
+  fs.writeToFile(filename,data)
 }
 
 // function to initialize program
@@ -58,9 +69,7 @@ function init() {
     var readTemplate = generateMarkdown(results);
 
     //3. call the writeTofile function and pass in the fileName -> "README.MD", and for data pass in the variable that you created that holds the generateMarkdown function from step2
-    function writeToFile(README , readTemplate) {
-     
-    }
+     writeToFile("README.md", readTemplate);
 
   });
 }

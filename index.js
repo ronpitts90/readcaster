@@ -63,7 +63,7 @@ async function writeToFile(filename, data) {
     }
     console.log(data);
   })
-  
+
 }
 
 // function to initialize program

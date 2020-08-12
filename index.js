@@ -78,7 +78,7 @@ function init() {
     console.log(`readTemplate: ${Object.values(results)}`)
 
     //3. call the writeTofile function and pass in the fileName -> "README.MD", and for data pass in the variable that you created that holds the generateMarkdown function from step2
-     writeToFile("README.md", readTemplate);
+     writeToFile("READMEE.md", readTemplate);
 
     return "success"
   });

@@ -73,7 +73,7 @@ function init() {
 
     //2. call the generateMarkdown function and pass in results and put it in a variable
 
-    var readTemplate = generateMarkdown(results[0]);
+    var readTemplate = generateMarkdown(results);
     console.log(`readTemplate: ${Object.keys(results)}`)
     console.log(`readTemplate: ${Object.values(results)}`)
 

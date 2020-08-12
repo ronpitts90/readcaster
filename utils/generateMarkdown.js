@@ -1,9 +1,21 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
   console.log(data)
-   return `# ${data.title}
-           
-
+   return `#Title: ${data.title}
+           #Description:
+            ${data.Description}
+           #Installation:
+            ${data.Installation}
+            #Usage:
+             ${data.Usage}
+            #Contributions:
+             ${data.Contributing}
+            #Testing:
+             ${data.Tests}
+            #License:
+             ${data.License}
+            #Questions?:
+             ${data.Github} , ${data.Email}
 `;
 }
 
@@ -15,11 +27,3 @@ function generateLicense(data){
 module.exports = generateMarkdown;
 
 
-// ${data.Description}
-// ${data.Installation}
-// ${data.Usage}
-// ${data.Contributing}
-// ${data.Tests}
-// ${data.License}
-// ${data.Github}
-// ${data.Email}

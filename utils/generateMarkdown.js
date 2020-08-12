@@ -1,16 +1,25 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-          ${data.name}
+  console.log(data)
+   return `# ${data.title}
+           
 
 `;
 }
 
-function generateLicense(){
+function generateLicense(data){
+  console.log(data)
  return `# ${data.license}`;
 }
 
 module.exports = generateMarkdown;
 
 
-// to take in a license argument
+// ${data.Description}
+// ${data.Installation}
+// ${data.Usage}
+// ${data.Contributing}
+// ${data.Tests}
+// ${data.License}
+// ${data.Github}
+// ${data.Email}

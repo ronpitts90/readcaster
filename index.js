@@ -14,7 +14,7 @@ const questions = [
   {
     type: "input",
     message: "Describe your project.",
-    name: "description",
+    name: "Description",
   },
   {
     type: "input",
@@ -54,9 +54,16 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(filename, data) {
+async function writeToFile(filename, data) {
+  console.log(`writing file.. filename: ${filename}, data: ${data}`)
   //use fs module in order to call the write file function
-  fs.writeToFile(filename,data)
+  fs.writeFile(filename,data, function (err,data) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log(data);
+  })
+  
 }
 
 // function to initialize program
@@ -66,13 +73,17 @@ function init() {
 
     //2. call the generateMarkdown function and pass in results and put it in a variable
 
-    var readTemplate = generateMarkdown(results);
+    var readTemplate = generateMarkdown(results[0]);
+    console.log(`readTemplate: ${Object.keys(results)}`)
+    console.log(`readTemplate: ${Object.values(results)}`)
 
     //3. call the writeTofile function and pass in the fileName -> "README.MD", and for data pass in the variable that you created that holds the generateMarkdown function from step2
      writeToFile("README.md", readTemplate);
 
+    return "success"
   });
 }
 
 // function call to initialize program
 init();
+// `Title: ${results.title}, License: ${results.License}`

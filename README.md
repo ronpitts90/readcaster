@@ -1,2 +1,1 @@
-# readcaster
-read-me generator 
+Title: asdf, License: sdf
